@@ -44,6 +44,9 @@ int main() {
   if (userPick == 'R')
     if (computerPick == 'R')
       cout << "Tie" << endl;
+      
+      else if (computerPick == 'P')
+        cout << "Win" << endl;
 
   // HANDOUT (PART B): Inform the user who won.
   // HANDOUT (PART C): Randomly display celebratory messages if user won.

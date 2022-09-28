@@ -41,9 +41,76 @@ int main() {
   computerPick = ComputerSelectRPSLK();
   TranslatePick(1, computerPick); // Inform user of computer selection
   // HANDOUT (PART A): Determine the winner of the game.
-  if (userPick == 'R')
+  
+  ///////////////////////// User input of Rock /////////////////////////////////////
+  
+  if ((userPick == 'R')) 
     if (computerPick == 'R')
       cout << "Tie" << endl;
+    else if (computerPick == 'P')
+        cout << "Win" << endl;
+    else if (computerPick == 'S')
+        cout << "Win" << endl;
+    else if (computerPick == 'L')
+        cout << "Win" << endl;
+    else if (computerPick == 'K')
+        cout << "Lose" << endl;
+
+  ///////////////////////// User input of Paper /////////////////////////////////////
+  
+  if ((userPick == 'P')) 
+    if (computerPick == 'R')
+      cout << "win" << endl;
+    else if (computerPick == 'P')
+        cout << "Tie" << endl;
+    else if (computerPick == 'S')
+        cout << "Lose" << endl;
+    else if (computerPick == 'L')
+        cout << "Lose" << endl;
+    else if (computerPick == 'K')
+        cout << "Win" << endl;
+
+  ///////////////////////// User input of Scissors /////////////////////////////////////
+   if ((userPick == 'S')) 
+    if (computerPick == 'R')
+      cout << "Lose" << endl;
+    else if (computerPick == 'P')
+        cout << "Win" << endl;
+    else if (computerPick == 'S')
+        cout << "Tie" << endl;
+    else if (computerPick == 'L')
+        cout << "Win" << endl;
+    else if (computerPick == 'K')
+        cout << "Lose" << endl;
+
+  ///////////////////////// User input of Spock /////////////////////////////////////
+   if ((userPick == 'K')) 
+    if (computerPick == 'R')
+      cout << "Win" << endl;
+    else if (computerPick == 'P')
+        cout << "Lose" << endl;
+    else if (computerPick == 'S')
+        cout << "Win" << endl;
+    else if (computerPick == 'L')
+        cout << "Lose" << endl;
+    else if (computerPick == 'K')
+        cout << "Tie" << endl;
+
+  ///////////////////////// User input of Lizzard /////////////////////////////////////
+   if ((userPick == 'L')) 
+    if (computerPick == 'R')
+      cout << "Lose" << endl;
+    else if (computerPick == 'P')
+        cout << "Win" << endl;
+    else if (computerPick == 'S')
+        cout << "Lose" << endl;
+    else if (computerPick == 'L')
+        cout << "Tie" << endl;
+    else if (computerPick == 'K')
+        cout << "Win" << endl;
+    
+    
+    
 
   // HANDOUT (PART B): Inform the user who won.
   // HANDOUT (PART C): Randomly display celebratory messages if user won.
@@ -73,7 +140,7 @@ void TranslatePick(int flag_who, char selection) {
     cout << who_text << " selected Scissors." << endl;
   else if (selection == 'L')
     cout << who_text << " selected Lizard." << endl;
-  else if (selection == 'S')
+  else if (selection == 'K')
     cout << who_text << " selected Spock." << endl;
   else // something is wrong
     cout << "Check code for errors. Message from TranslatePick fcn." << endl;
