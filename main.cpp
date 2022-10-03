@@ -12,14 +12,15 @@ using namespace std;
 //////////////////// Prototype Functions /////////////////////////////////////
 void TranslatePick(int flag_who, char selection);
 char ComputerSelectRPSLK();
+string message();
 //////////////////// MAIN ////////////////////////////////////////////////////
 int main() {
   // declare vars
   char userPick;           // user's selection for game
   bool valid_pick = false; // flag controlled while loop for obtaining
   // user input
-  char computerPick; // randomly selected computer selection for
-  // game
+  char computerPick; // randomly selected computer selection for game
+  string suprise;
   // Display rules of the game.
   cout << "It's time to play Rock, Paper, Scissors, Lizard, Spock!" << endl;
   cout << "Use R (for Rock), P (for Paper), S (for Scissors), ";
@@ -40,80 +41,111 @@ int main() {
   // Obtain computer selection.
   computerPick = ComputerSelectRPSLK();
   TranslatePick(1, computerPick); // Inform user of computer selection
-  // HANDOUT (PART A): Determine the winner of the game.
-  
-  ///////////////////////// User input of Rock /////////////////////////////////////
-  
-  if ((userPick == 'R')) 
-    if (computerPick == 'R')
-      cout << "Tie" << endl;
-    else if (computerPick == 'P')
-        cout << "Win" << endl;
-    else if (computerPick == 'S')
-        cout << "Win" << endl;
-    else if (computerPick == 'L')
-        cout << "Win" << endl;
-    else if (computerPick == 'K')
-        cout << "Lose" << endl;
+  // HANDOUT (PART A): Determine the winner of the game & (PART B) Display the winner
 
-  ///////////////////////// User input of Paper /////////////////////////////////////
-  
-  if ((userPick == 'P')) 
-    if (computerPick == 'R')
-      cout << "win" << endl;
-    else if (computerPick == 'P')
-        cout << "Tie" << endl;
-    else if (computerPick == 'S')
-        cout << "Lose" << endl;
-    else if (computerPick == 'L')
-        cout << "Lose" << endl;
-    else if (computerPick == 'K')
-        cout << "Win" << endl;
+  ///////////////////////// User input of Rock
+  ////////////////////////////////////////
 
-  ///////////////////////// User input of Scissors /////////////////////////////////////
-   if ((userPick == 'S')) 
+  if (userPick == 'R') {
     if (computerPick == 'R')
-      cout << "Lose" << endl;
+      cout << "It is a Tie" << endl;
     else if (computerPick == 'P')
-        cout << "Win" << endl;
+      cout << "You Lose :(" << endl;
     else if (computerPick == 'S')
-        cout << "Tie" << endl;
+      //cout << "You Win!" << endl;
+            suprise = message();
     else if (computerPick == 'L')
-        cout << "Win" << endl;
+            suprise = message();
+      //cout << "You Win!" << endl;
     else if (computerPick == 'K')
-        cout << "Lose" << endl;
+      cout << "You Lose :(" << endl;
+  }
 
-  ///////////////////////// User input of Spock /////////////////////////////////////
-   if ((userPick == 'K')) 
+  ///////////////////////// User input of Paper
+  ////////////////////////////////////////
+
+  if (userPick == 'P') {
     if (computerPick == 'R')
-      cout << "Win" << endl;
+            suprise = message();
+     // cout << "You Win!" << endl;
     else if (computerPick == 'P')
-        cout << "Lose" << endl;
+      cout << "It is a Tie" << endl;
     else if (computerPick == 'S')
-        cout << "Win" << endl;
+      cout << "You Lose :(" << endl;
     else if (computerPick == 'L')
-        cout << "Lose" << endl;
+      cout << "You Lose :(" << endl;
     else if (computerPick == 'K')
-        cout << "Tie" << endl;
+            suprise = message();
+      //cout << "You Win!" << endl;
+  }
 
-  ///////////////////////// User input of Lizzard /////////////////////////////////////
-   if ((userPick == 'L')) 
+  ///////////////////////// User input of Scissors
+  ////////////////////////////////////////
+  if (userPick == 'S') {
     if (computerPick == 'R')
-      cout << "Lose" << endl;
+      cout << "You Lose :(" << endl;
     else if (computerPick == 'P')
-        cout << "Win" << endl;
+            suprise = message();
+      //cout << "You Win!" << endl;
     else if (computerPick == 'S')
-        cout << "Lose" << endl;
+      cout << "It is a Tie" << endl;
     else if (computerPick == 'L')
-        cout << "Tie" << endl;
+            suprise = message();
+      //cout << "You Win!" << endl;
     else if (computerPick == 'K')
-        cout << "Win" << endl;
-    
-    
-    
+      cout << "You Lose :(" << endl;
+  }
 
-  // HANDOUT (PART B): Inform the user who won.
+  ///////////////////////// User input of Spock
+  ////////////////////////////////////////
+  if (userPick == 'K') {
+    if (computerPick == 'R')
+           suprise = message();
+      // cout << " You Win! " << endl;
+    else if (computerPick == 'P')
+      cout << " You Lose :(" << endl;
+    else if (computerPick == 'S')
+            suprise = message();
+      //cout << " You win!" << endl;
+    else if (computerPick == 'L')
+      cout << " You Lose :(" << endl;
+    else if (computerPick == 'K')
+      cout << " It is a Tie " << endl;
+  }
+
+  ///////////////////////// User input of Lizzard
+  ////////////////////////////////////////
+
+  if (userPick == 'L') {
+
+    if (computerPick == 'R')
+      cout << " You Lose :(" << endl;
+    else if (computerPick == 'P')
+            suprise = message();
+      //cout << " You Win! " << endl;
+    else if (computerPick == 'S')
+            suprise = message();
+      //cout << " You Win! " << endl;
+    else if (computerPick == 'L')
+      cout << " It is a Tie " << endl;
+    else if (computerPick == 'K')
+            suprise = message();
+      //cout << " You Win " << endl;
+  }
+
+  // HANDOUT (PART B): Inform the user who won, I combined this with PART A
+  /* char Win, Tie, Lose;
+  if (userPick == computerPick){
+    cout << " It is a tie" << endl;
+  if ("output" || ()
+    cout << "You win " << endl;
+  if ("Lose")
+    cout << "You lose" << endl;}*/
+
   // HANDOUT (PART C): Randomly display celebratory messages if user won.
+  
+
+
   return 0;
 }
 
@@ -178,4 +210,54 @@ char ComputerSelectRPSLK() {
     cout << "Error in the function ComputerSelectRPSLK. " << endl;
   }
   return randPickChar;
+}
+
+//random message display
+string message(){
+  string suprise;
+  int number;
+
+  //pick random number 
+  srand (time(NULL)); //random seed
+  number = rand() % 5; // 0-4
+  cout << number;
+
+  //assign number to phrase
+  switch(number){
+    case 0:
+    suprise = "Congragulations you won!!" ;
+      cout << suprise;
+    break;
+    
+
+    case 1:
+    suprise = " You are a winner!!";
+      cout << suprise;
+    break;
+
+    case 2:
+    suprise = " Nice job! ";
+      cout << suprise;
+    break;
+
+    case 3:
+    suprise = "This is too easy!";
+      cout << suprise;
+    break;
+
+    case 4:
+    suprise = "Well done!";
+      cout << suprise;
+      break;
+
+    default: 
+    suprise = " ";
+      cout << suprise;
+    break; 
+
+    
+  }
+return suprise;
+  
+  
 }
