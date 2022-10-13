@@ -13,8 +13,11 @@ using namespace std;
 void TranslatePick(int flag_who, char selection);
 char ComputerSelectRPSLK();
 string message();
+void out(string tie, string lose, string win);
+
 //////////////////// MAIN ////////////////////////////////////////////////////
 int main() {
+  for ( int i = 1; i <= 3; ++i){
   // declare vars
   char userPick;           // user's selection for game
   bool valid_pick = false; // flag controlled while loop for obtaining
@@ -117,19 +120,23 @@ int main() {
   ////////////////////////////////////////
 
   if (userPick == 'L') {
-
     if (computerPick == 'R')
       cout << " You Lose :(" << endl;
+      
     else if (computerPick == 'P')
             suprise = message();
+          
       //cout << " You Win! " << endl;
     else if (computerPick == 'S')
             suprise = message();
+
       //cout << " You Win! " << endl;
     else if (computerPick == 'L')
       cout << " It is a Tie " << endl;
+
     else if (computerPick == 'K')
             suprise = message();
+
       //cout << " You Win " << endl;
   }
 
@@ -143,9 +150,13 @@ int main() {
     cout << "You lose" << endl;}*/
 
   // HANDOUT (PART C): Randomly display celebratory messages if user won.
+
   
-
-
+    
+  
+    
+    cout << "                                                                     " << endl;
+    }
   return 0;
 }
 
@@ -225,28 +236,28 @@ string message(){
   //assign number to phrase
   switch(number){
     case 0:
-    suprise = "Congragulations you won!!" ;
+    suprise = "\nCongragulations you won!!" ;
       cout << suprise;
     break;
     
 
     case 1:
-    suprise = " You are a winner!!";
+    suprise = "\nYou are a winner!!";
       cout << suprise;
     break;
 
     case 2:
-    suprise = " Nice job! ";
+    suprise = "\nNice job! ";
       cout << suprise;
     break;
 
     case 3:
-    suprise = "This is too easy!";
+    suprise = "\nThis is too easy!";
       cout << suprise;
     break;
 
     case 4:
-    suprise = "Well done!";
+    suprise = "\nWell done!";
       cout << suprise;
       break;
 
