@@ -190,18 +190,39 @@ void TranslatePick(int flag_who, char selection) {
     cout << "Check code for errors. Message from TranslatePick fcn." << endl;
   return;
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////// ADDED ARRAY FOR HW 7 ////////////////////////////////////////////////////////////////
+/////////// BELOW //////////////////////////////////////////////////////////////////////////////
+
 
 /* Descprition: This function is used to make a random character selection in
 the game Rock, Paper, Scissors, Lizard, Spock Parameters: there are no inputs */
 char ComputerSelectRPSLK() {
   // declare local function variables
-  char randPickChar;
+ // int randPickChar;
   int randPick;
   // pick a random number from 0 to 4
   srand(time(NULL));     // initialize random seed.
   randPick = rand() % 5; // gives us 0 to 4
   // cout << randPick; // uncomment to debug
   // assign random number to letter
+  char Randpickchar[] = {'R','P','S','L','K'};
+
+if  (randPick = 0){
+    randPick = Randpickchar[0];}
+else if(randPick = 1){
+    randPick = Randpickchar[1];}
+else if(randPick = 2){
+    randPick = Randpickchar[2];}
+else if(randPick = 3){
+    randPick = Randpickchar[3];}
+  else if(randPick = 4){
+    randPick = Randpickchar[4];}
+
+
+
+
+  /*
   switch (randPick) {
   case 0:
     randPickChar = 'R';
@@ -219,11 +240,13 @@ char ComputerSelectRPSLK() {
     randPickChar = 'K';
     break;
   default:
-    cout << "Error in the function ComputerSelectRPSLK. " << endl;
-  }
-  return randPickChar;
+    cout << "Error in the function ComputerSelectRPSLK. " << endl; */
+  
+  return randPick;
+  
 }
-
+////////////////////////// ^^^^^^^^^^^^^^^^^HW 7 ^^^^^^^^^^^^^^^^^^ //////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 //random message display
 string message(){
   string suprise;
@@ -268,7 +291,7 @@ string message(){
     break; 
 
     
-  }
+    }
 return suprise;
   
   
